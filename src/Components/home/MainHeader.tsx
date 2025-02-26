@@ -1,39 +1,28 @@
 "use client";
 import { useEffect, useRef } from "react";
-import gsap from "gsap";
+
 import "./MainHeader.css";
+import { useAnimateGsap } from "@/hooks/useAnimategsap";
 
 export const MainHeader = () => {
-  const headerRef = useRef(null);
-  const textRef = useRef(null);
-  const imageRef = useRef(null);
-  const mobileImageRef = useRef(null);
+  const headerRef = useRef<HTMLHeadingElement>(null);
+  const textRef = useRef<HTMLParagraphElement>(null);
+  const imageRef = useRef<HTMLImageElement>(null);
+  const mobileImageRef = useRef<HTMLImageElement>(null);
 
+  const { setHeaderRef, setTextRef, setImageRef, setMobileImageRef } = useAnimateGsap({
+    opacity: 1,
+    y: 50,
+    duration: 1.5,
+    delay: 0.5,
+  });
+ 
   useEffect(() => {
-    gsap.fromTo(
-      headerRef.current,
-      { opacity: 0, y: 100 },
-      { opacity: 1, y: 0, duration: 1, ease: "power3.out" }
-    );
-
-    gsap.fromTo(
-      textRef.current,
-      { opacity: 0, y: 100 },
-      { opacity: 1, y: 0, duration: 1, ease: "power3.out", delay: 0.3 }
-    );
-
-    gsap.fromTo(
-      imageRef.current,
-      { opacity: 0, y: 100 },
-      { opacity: 1, y: 0, duration: 1, ease: "power3.out", delay: 0.5 }
-    );
-
-    gsap.fromTo(
-      mobileImageRef.current,
-      { opacity: 0, y: 100 },
-      { opacity: 1, y: 0, duration: 1, ease: "power3.out", delay: 0.7 }
-    );
-  }, []);
+    setHeaderRef(headerRef.current);
+    setTextRef(textRef.current);
+    setImageRef(imageRef.current);
+    setMobileImageRef(mobileImageRef.current);
+  }, [setHeaderRef, setTextRef, setImageRef, setMobileImageRef]);
 
   return (
     <div   className="relative min-h-screen bg-image overflow-hidden">
