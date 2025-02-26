@@ -15,15 +15,15 @@
   position: relative;
   text-transform: uppercase;
   cursor: pointer;
-  clip-path: polygon(0 0, 100% 0, 100% 50%, 90% 100%, 0 100%);  
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 90% 100%, 0 100%);
   transition: all 0.3s ease-in-out;
 }
 
 .custom-button:hover {
-  background-color: #c3e350;  
-  transform: translateY(-2px);  
+  background-color: #c3e350;
+  transform: translateY(-2px);
 }
 
 .custom-button:active {
-  transform: translateY(0);  
+  transform: translateY(0);
 }

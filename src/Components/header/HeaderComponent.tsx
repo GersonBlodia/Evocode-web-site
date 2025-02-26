@@ -23,10 +23,10 @@ export const HeaderComponent = () => {
         { id: 3, path: '/Servicios', name: 'Servicios', icon: 'services-icon', status: false },
         { id: 4, path: '/Contacto', name: 'Contacto', icon: 'contact-icon', status: true },
     ];
- 
+
     useEffect(() => {
         const handleScroll = () => {
-            setScrolled(window.scrollY > 1);  
+            setScrolled(window.scrollY > 1);
         };
 
         window.addEventListener('scroll', handleScroll);
@@ -51,21 +51,21 @@ export const HeaderComponent = () => {
                             className="object-contain mx-auto"
                         />
                     </div>
- 
+
                     <button
                         className="p-2 rounded w-[100px] text-black font-bold text-lg bg-white md:hidden"
                         onClick={() => handleIsActive()}
                     >
                         {isActive ? 'Cerrar' : 'Menu'}
                     </button>
- 
+
                     <nav
                         className={`
                             fixed md:relative top-0 left-0 h-screen md:h-auto w-64 md:w-auto
                             bg-[#1e1c1c] md:bg-transparent p-8
                             transform ${
                                 isActive ? 'translate-x-0' : '-translate-x-full'
-                            } 
+                            }
                             md:translate-x-0 transition-transform duration-200 ease-in-out
                             flex flex-col md:flex-row items-start md:items-center
                             md:justify-between flex-1

@@ -1,7 +1,6 @@
 import { HeaderComponent } from "@/Components/header/HeaderComponent";
+import { FooterComponent } from "@/Components/footer/FooterComponent";
 
- 
- 
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -12,9 +11,13 @@ export default function RootLayout({
       <body
         className={` `}
       >
-         <HeaderComponent/>
+        <HeaderComponent/>
         {children}
-        <footer>desde footer</footer>
+        <footer
+        className={` `}
+        >
+          <FooterComponent/>
+        </footer>
       </body>
     </html>
   );
