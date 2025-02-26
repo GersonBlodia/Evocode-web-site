@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+ body{
+  overflow-x: hidden;
+ }
+.main-home{
+  background: linear-gradient(135deg, #0a0c17, #121426, #1a1d36);
+  background-size: cover;
+  
+}
 .custom-button {
   display: inline-flex;
   align-items: center;

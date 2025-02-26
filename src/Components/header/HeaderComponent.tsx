@@ -36,7 +36,7 @@ export const HeaderComponent = () => {
     return (
         <header
             className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
-                scrolled ? 'bg-[#1e1c1c] shadow-md' : 'bg-transparent'
+                scrolled ? ' main-home shadow-md' : 'bg-transparent'
             }`}
         >
             <div className="w-[78%] mx-auto px-4 py-2">
