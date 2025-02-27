@@ -2,8 +2,8 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    background: #000000;
-    background-image: url(https://demo.casethemes.net/itfirm/wp-content/uploads/2021/09/bg-footer1.jpg);
+    border: none;
+    background-image: url(/images/bg-black.jpg);
     color: white;
     padding: 40px 50px 40px 50px;
     padding-bottom: 10px;
@@ -117,9 +117,7 @@
     width: 100%;
     text-align: center;
     padding: 15px 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    background: #0e0b1f;
-    background-image: url(https://demo.casethemes.net/itfirm/wp-content/uploads/2021/09/bg-footer1.jpg);
+    border: none;
     position: relative;
     bottom: 0;
     left: 0;
@@ -239,8 +237,7 @@
       width: 100%;
       text-align: center;
       padding: 10px 0;
-      background-color: #000;
-      background-image: url(https://demo.casethemes.net/itfirm/wp-content/uploads/2021/09/bg-footer1.jpg);
+      border: none;
       color: white;
       grid-column: 1 / -1;
     }
@@ -263,8 +260,7 @@
       width: 100%;
       text-align: center;
       padding: 10px 0;
-      background-color: #000;
-      background-image: url(https://demo.casethemes.net/itfirm/wp-content/uploads/2021/09/bg-footer1.jpg);
+      border: none;
       color: white;
       grid-column: 1 / -1;
     }

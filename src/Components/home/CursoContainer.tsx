@@ -28,9 +28,9 @@ export const CursoContainer = () => {
         animateContent();
       }
     };
- 
+
     gsap.set(containerRef.current, {  opacity: 0, y: 50 });
- 
+
     if (window.scrollY > 100) {
       animateContent();
     }
