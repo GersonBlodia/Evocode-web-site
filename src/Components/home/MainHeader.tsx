@@ -16,7 +16,7 @@ export const MainHeader = () => {
     duration: 1.5,
     delay: 0.5,
   });
- 
+
   useEffect(() => {
     setHeaderRef(headerRef.current);
     setTextRef(textRef.current);
@@ -26,10 +26,8 @@ export const MainHeader = () => {
 
   return (
     <div   className="relative min-h-screen bg-image overflow-hidden">
-     
       <div className="absolute inset-0 bg-gradient-to-r from-purple-700 to-blue-500 clip-polygon-overlay z-10" />
 
-      
       <div
         ref={textRef}
         className="relative z-20 w-11/12 md:w-4/5 mx-auto h-full flex items-center pt-[6rem] md:py-[10rem]"
@@ -51,7 +49,7 @@ export const MainHeader = () => {
           </button>
         </div>
       </div>
- 
+
       <div
         ref={imageRef}
         className="absolute right-0 top-0 h-full z-20 hidden md:block"
@@ -63,7 +61,6 @@ export const MainHeader = () => {
         />
       </div>
 
-    
       <div
         ref={mobileImageRef}
         className="absolute right-0 bottom-0 w-full h-1/2 z-20 md:hidden"
