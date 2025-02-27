@@ -12,6 +12,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      backgroundImage: {
+        'planes': "url('/images/bg-white.jpg')",
+      }
     },
   },
   plugins: [],
