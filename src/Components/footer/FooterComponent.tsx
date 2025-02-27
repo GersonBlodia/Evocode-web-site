@@ -46,14 +46,14 @@ export const FooterComponent = () => {
         </div>
 
         <div className="footer-section">
-        <h3 className="footer-title">Cursos y Asesoría</h3>
+        <h3 className="footer-title">Galería</h3>
         <div className="gallery">
-            <img src="/images/angularjs.png" alt="Gallery 1" />
-            <img src="/images/React.png" alt="Gallery 2" />
-            <img src="/images/GitHub.png" alt="Gallery 3" />
-            <img src="/images/java.png" alt="Gallery 4" />
-            <img src="/images/sql.png" alt="Gallery 5" />
-            <img src="images/android.png" alt="Gallery 6" />
+            <img src="/images/gallery1.jpg" alt="Gallery 1" />
+            <img src="/images/gallery2.jpg" alt="Gallery 2" />
+            <img src="/images/gallery3.jpg" alt="Gallery 3" />
+            <img src="/images/gallery4.jpg" alt="Gallery 4" />
+            <img src="/images/gallery5.jpg" alt="Gallery 5" />
+            <img src="/images/gallery6.jpg" alt="Gallery 6" />
         </div>
         </div>
         <div className="footer-bottom">
