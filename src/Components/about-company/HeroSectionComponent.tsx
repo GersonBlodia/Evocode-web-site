@@ -1,5 +1,6 @@
 'use client';
 
+import "./HeroSectionStyle.css";
 import { motion } from 'framer-motion';
 import { Play, Phone } from 'lucide-react';
 import Image from 'next/image';
@@ -11,13 +12,12 @@ import { ArrowRight } from 'lucide-react';
 
 export default function ITServiceSection() {
 return (
-    <section className="w-full flex justify-center p-10 bg-white"
+    <section className="w-full flex justify-center p-10 bg-white text-container"
     style= {{
         backgroundImage: 'url("/images/bg-white2.jpg")',
     }}
     >
-    <div className="flex flex-col lg:flex-row items-center justify-center gap-16 max-w-5xl">
-        {/* Imagen con animación de puntos */}
+    <div className="flex flex-col md:flex-row items-center justify-center gap-16 max-w-5xl">
         <div className="relative">
         <motion.div
             animate={{ opacity: [0.5, 1, 0.5] }}
@@ -29,7 +29,7 @@ return (
             width={350}
             height={450}
             alt="Woman with clipboard"
-            className="rounded-lg shadow-lg"
+            className="rounded-lg shadow-lg w-full imagen-responsive"
         />
         <Link href="https://www.tiktok.com/@evocodeteam/video/7463350237378219270" target="_blank">
             <motion.div
