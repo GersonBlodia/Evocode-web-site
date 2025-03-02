@@ -35,3 +35,9 @@
 .custom-button:active {
   transform: translateY(0);
 }
+
+
+
+.gradient-custom {
+  background: linear-gradient(to bottom, #7114EF, #1475F7);
+}

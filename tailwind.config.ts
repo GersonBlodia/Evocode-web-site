@@ -14,7 +14,8 @@ export default {
       },
       backgroundImage: {
         'planes': "url('/images/bg-white.jpg')",
-      }
+      },
+     
     },
   },
   plugins: [],
