@@ -3,6 +3,8 @@ import ITServiceSection from "@/Components/about-company/HeroSectionComponent"
 import { CursoContainer } from "@/Components/home/CursoContainer"
 import PricingSection from "@/Components/pricing-card/PlansComponent"
  
+import { UXUICard } from "@/Components/UI/card/UXUICard"
+ 
 
 const PageHome = () => {
   return (
@@ -17,8 +19,14 @@ const PageHome = () => {
           <TextNumber/>
           <AccordionGroup/>
           </div>
-         
           </div>
+
+          <section className="w-[80%] mx-auto p-8">
+             <UXUICard
+              
+                 
+             />
+          </section>
   </MainHome>
   </main>
   )
