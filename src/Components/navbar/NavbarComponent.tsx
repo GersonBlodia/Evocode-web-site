@@ -2,7 +2,9 @@
 
 import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, Menu } from 'lucide-react';
+import { X } from 'lucide-react';
+
 
 const NavbarComponent = () => {
   type Category = keyof typeof courses;
@@ -35,7 +37,7 @@ const NavbarComponent = () => {
       "React Masterclass – Construye aplicaciones interactivas como un pro",
       "Angular Pro – Arquitectura escalable y buenas prácticas",
     ],
-    "Desarrollo backend":[
+    "Desarrollo backend": [
       "SQL Server desde Cero – Aprende consultas, relaciones y optimización",
       "Python Backend Power – Crea APIs robustas con Django y Flask",
       "Java desde Cero a Experto – Tu camino al backend profesional",
@@ -50,38 +52,52 @@ const NavbarComponent = () => {
     courses: false,
     business: false,
   });
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleDropdown = (menu: string) => {
     setIsOpen((prev) => ({ ...prev, [menu]: !prev[menu] }));
   };
 
   return (
-    <nav className="sticky top-0 z-50 flex items-center justify-between px-12 py-6 bg-black bg-opacity-90 backdrop-blur-md shadow-md">
-      <div className="text-3xl font-bold text-white">
-        evocode
+    <nav className="sticky top-0 z-50 bg-black bg-opacity-90 backdrop-blur-md shadow-md px-6 py-4 md:px-12 flex items-center justify-between">
+      <div className="text-2xl md:text-3xl font-bold text-white">evocode</div>
+
+      <div className="md:hidden flex items-center space-x-4">
+        <button className="text-white">
+        <FaSearch />
+        </button>
+        <button onClick={() => setMenuOpen(!menuOpen)} className="text-white">
+          {menuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+        <button className="bg-blue-700 text-white px-4 py-1.5 font-semibold hover:bg-blue-600 text-sm">
+          Registro
+        </button>
       </div>
 
-      <div className="flex items-center space-x-6 text-white font-semibold text-lg">
+      <div
+  className={`${
+              menuOpen ? "flex flex-col items-start space-y-4 w-full mt-4" : "hidden"
+            } md:flex md:flex-row md:items-center md:space-x-6 text-white font-semibold text-lg`}
+            >
         {["Inicio", "Cursos", "Nosotros", "Servicios", "Contacto"].map(
           (item, index) => {
             const key = item.toLowerCase().replace(" ", "");
             return (
               <div key={index} className="relative">
-              <button
-              onClick={() => toggleDropdown(key)}
-              className="flex items-center gap-1 hover:underline focus:outline-none"
-              aria-expanded={isOpen[key]}
-              >
-              {item} {item === "Cursos" && <ChevronDown size={20} />}
-              </button>
+                <button
+                  onClick={() => toggleDropdown(key)}
+                  className="flex items-center gap-1 hover:underline focus:outline-none"
+                  aria-expanded={isOpen[key]}
+                >
+                  {item} {item === "Cursos" && <ChevronDown size={20} />}
+                </button>
 
                 {isOpen[key] && item === "Cursos" && (
-              <div className="absolute left-0 top-full mt-4 w-[900px] bg-white border rounded-md shadow-lg flex p-4 z-50">
-
-
+                  <div className="absolute left-0 top-full mt-4 w-[900px] bg-white border rounded-md shadow-lg flex p-4 z-50 hidden md:flex">
                     <div className="w-1/3 border-r pr-4">
                       <h3 className="font-bold text-black mb-2 text-lg">Cursos</h3>
-                      <ul className="space-y-2 text-black text-sm">
+                      <ul className="flex flex-wrap md:block justify-center gap-2 text-black text-sm max-h-80 overflow-auto">
+
                         {categories.map((category, index) => (
                           <li
                             key={index}
@@ -152,7 +168,7 @@ const NavbarComponent = () => {
         )}
       </div>
 
-      <div className="flex items-center space-x-4">
+      <div className="hidden md:flex items-center space-x-4">
         <div className="relative">
           <input
             type="text"
@@ -167,7 +183,7 @@ const NavbarComponent = () => {
           </button>
         </div>
         <button className="text-white font-semibold">Iniciar sesión</button>
-        <button className="bg-blue-700 text-white px-4 py-1.5 rounded-full font-semibold hover:bg-blue-600">
+        <button className="bg-blue-700 text-white px-4 py-1.5 font-semibold hover:bg-blue-600 text-sm">
           Registro
         </button>
       </div>
