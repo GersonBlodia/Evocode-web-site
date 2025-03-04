@@ -1,5 +1,6 @@
-import { HeaderComponent } from "@/Components/header/HeaderComponent";
+// import { HeaderComponent } from "@/Components/header/HeaderComponent";
 import { FooterComponent } from "@/Components/footer/FooterComponent";
+import NavbarComponent from "@/Components/navbar/NavbarComponent";
 
 export default function RootLayout({
   children,
@@ -11,12 +12,12 @@ export default function RootLayout({
       <body
         className={` `}
       >
-        <HeaderComponent/>
+        <NavbarComponent/>
         {children}
         <footer
         className={` `}
         >
-          <FooterComponent/>
+        <FooterComponent/>
         </footer>
       </body>
     </html>

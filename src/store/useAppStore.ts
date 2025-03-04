@@ -1,14 +1,14 @@
-import {create} from 'zustand'
+import { create } from "zustand";
 
-interface StoreApp{
-    isActive: boolean;   
-    handleIsActive:()=>void;
+interface StoreApp {
+    isActive: boolean;
+    handleIsActive: () => void;
 }
-export const useAppStore= create<StoreApp>()((set,get)=>({
-    isActive:false,
+
+export const useAppStore = create<StoreApp>((set, get) => ({
+    isActive: false,
     handleIsActive() {
-            console.log(get().isActive);
-            set((state)=>({isActive:!state.isActive}))
-            console.log()
+        console.log(get().isActive);
+        set((state) => ({ isActive: !state.isActive }));
     },
-}))
+}));

@@ -1,6 +1,4 @@
 'use client';
-
-import "./HeroSectionStyle.css";
 import { motion } from 'framer-motion';
 import { Play, Phone } from 'lucide-react';
 import Image from 'next/image';
@@ -15,9 +13,11 @@ return (
     <section className="w-full flex justify-center p-10 bg-white text-container"
     style= {{
         backgroundImage: 'url("/images/bg-white2.jpg")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
     }}
     >
-    <div className="flex flex-col md:flex-row items-center justify-center gap-16 max-w-5xl">
+<div className="flex flex-col md:flex-row items-center justify-center gap-16 max-w-5xl">
         <div className="relative">
         <motion.div
             animate={{ opacity: [0.5, 1, 0.5] }}
@@ -25,20 +25,20 @@ return (
             className="absolute -top-5 -left-5 w-32 h-32 bg-gradient-to-r from-purple-500 to-transparent rounded-full opacity-30"
         />
         <Image
-            src="/images/intro-video.jpg"
-            width={350}
-            height={450}
-            alt="Woman with clipboard"
-            className="rounded-lg shadow-lg w-full imagen-responsive"
+        src="/images/intro-video.jpg"
+        width={300}
+        height={220}
+        alt="Woman with clipboard"
+        className="rounded-lg shadow-lg max-w-[500px] md:max-w-[600px] h-auto object-cover"
         />
         <Link href="https://www.tiktok.com/@evocodeteam/video/7463350237378219270" target="_blank">
-            <motion.div
+        <motion.div
             animate={{ scale: [1, 1.2, 1] }}
             transition={{ duration: 1.5, repeat: Infinity }}
-            className="absolute bottom-5 right-5 bg-purple-600 p-4 rounded-full shadow-lg cursor-pointer"
-            >
-            <Play className="text-white w-6 h-6" />
-            </motion.div>
+            className="absolute bottom-4 right-0 mr-6 bg-purple-600 p-4 rounded-full shadow-lg cursor-pointer"
+        >
+        <Play className="text-white w-8 h-8" />
+        </motion.div>
         </Link>
         </div>
 
@@ -76,7 +76,7 @@ return (
             transition={{ duration: 0.5, repeat: Infinity }}
             className="flex items-center gap-2 text-purple-600 font-bold cursor-pointer"
             >
-            <Phone className="w-6 h-6" /> +51 922 196 988
+            <Phone className="w-6 h-6"/> +51 922 196 988
             </motion.div>
         </div>
         </div>
