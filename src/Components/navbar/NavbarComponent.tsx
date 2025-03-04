@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { FaSearch } from "react-icons/fa";
+ 
 import { ChevronDown, Menu } from 'lucide-react';
 import { X } from 'lucide-react';
 
@@ -64,7 +64,7 @@ const NavbarComponent = () => {
 
       <div className="md:hidden flex items-center space-x-4">
         <button className="text-white">
-        <FaSearch />
+       
         </button>
         <button onClick={() => setMenuOpen(!menuOpen)} className="text-white">
           {menuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -179,7 +179,7 @@ const NavbarComponent = () => {
             className="absolute right-2 top-1/2 transform -translate-y-1/2 text-blue-700"
             aria-label="Search"
           >
-            <FaSearch />
+            
           </button>
         </div>
         <button className="text-white font-semibold">Iniciar sesión</button>

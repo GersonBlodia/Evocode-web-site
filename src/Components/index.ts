@@ -1,3 +1,5 @@
+export { MainCourses } from "./courses/main/MainCourses";
+
 export { TextNumber } from "./UI/Text/TextNumber";
 
 export { AccordionGroup } from "./UX/Accordition/AccordionGroup";
